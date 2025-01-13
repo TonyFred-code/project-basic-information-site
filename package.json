@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "This is a basic Node.js project that serves a simple informational website with four pages: Home, About, Contact Me, and a custom 404 error page. The goal of this project is to demonstrate the creation of a basic web server using Node.js to serve different HTML files based on the requested URL.",
   "main": "app.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node --watch app.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/TonyFred-code/project-basic-information-site#readme",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "express": "^4.21.2"
   }
 }
