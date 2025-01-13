@@ -2,7 +2,7 @@
   "name": "project-basic-information-site",
   "version": "1.0.0",
   "description": "This is a basic Node.js project that serves a simple informational website with four pages: Home, About, Contact Me, and a custom 404 error page. The goal of this project is to demonstrate the creation of a basic web server using Node.js to serve different HTML files based on the requested URL.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
