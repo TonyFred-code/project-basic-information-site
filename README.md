@@ -16,8 +16,8 @@ The project consists of the following files:
 ## Features
 
 - **Homepage**: Accessed at `http://localhost:8080/`
-- **About Page**: Accessed at `http://localhost:8080/about`
-- **Contact Page**: Accessed at `http://localhost:8080/contact-me`
+- **About Page**: Accessed at `http://localhost:8080/about.html`
+- **Contact Page**: Accessed at `http://localhost:8080/contact-me.html`
 - **404 Page**: Displayed when the user tries to access any URL not listed above.
 
 ## How to Run
