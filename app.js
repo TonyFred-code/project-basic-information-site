@@ -1,7 +1,7 @@
-import dotenv from 'dotenv';
-import express from 'express';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import dotenv from "dotenv";
+import express from "express";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
 
 dotenv.config();
 
@@ -10,23 +10,28 @@ const __dirname = dirname(__filename);
 
 const app = express();
 
-app.get('/', (req, res) => {
-  res.sendFile(join(__dirname, 'public', 'index.html'));
+app.get("/", (req, res) => {
+  res.sendFile(join(__dirname, "public", "index.html"));
 });
 
-app.get('/about', (req, res) => {
-  res.sendFile(join(__dirname, 'public', 'about.html'));
+app.get("/about", (req, res) => {
+  res.sendFile(join(__dirname, "public", "about.html"));
 });
 
-app.get('/contact-me', (req, res) => {
-  res.sendFile(join(__dirname, 'public', 'contact-me.html'));
+app.get("/contact-me", (req, res) => {
+  res.sendFile(join(__dirname, "public", "contact-me.html"));
 });
 
-app.get('*', (req, res) => {
-  res.sendFile(join(__dirname, 'public', '404.html'));
+app.get("*", (req, res) => {
+  res.sendFile(join(__dirname, "public", "404.html"));
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+app
+  .listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  })
+  .on("error", (error) => {
+    console.error(`Server failed to start: `, error);
+    process.exit(1);
+  });
